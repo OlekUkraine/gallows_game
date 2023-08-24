@@ -1,0 +1,22 @@
+.ButtonForGame {
+    padding: 8px;
+
+    cursor: pointer;
+
+    box-shadow: 1px 1px 2px grey, -1px -1px 2px #3d3d3d;
+    border-radius: 14px;
+
+    transition: box-shadow .5s;
+}
+
+.ButtonForGame:hover {
+    background-color: rgba(121, 114, 74, 0.25);
+
+    box-shadow: 1px 1px 2px #3d3d3d, -1px -1px 2px grey;
+}
+
+.ButtonForGame:active {
+    background-color: rgba(79, 243, 62, 0.32);
+
+    box-shadow: 0 0 2px #3d3d3d, 0 0 2px grey;
+}

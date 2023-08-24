@@ -1,16 +1,15 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+
 import './CellsForLetters.css';
-import {CellForLetter} from "../cellForLetter/CellForLetter";
-import {wordService} from "../../services/word.service";
-import {wordsForGame} from "../../assets/arrWords/arrWords";
+import {CellForLetter} from "../cellAndLetter/CellForLetter";
 
 const CellsForLetters = ({word}) => {
 
     return (
         <div className={'CellsForLetters'}>
-            <div className={'word'}>
+            <div className={'word'} id={'word'}>
                 {
-                    word.map((cell, index) => <CellForLetter withLetter={cell} index={index}/> )
+                    word.map((cell, index) => <CellForLetter key={index} withLetter={cell} index={index}/> )
                 }
             </div>
         </div>

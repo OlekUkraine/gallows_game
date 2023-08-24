@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "Ustroke";
+    src:
+            url("assets/fonts/Ustrokeregular.ttf") format("ttf"),
+            url("assets/fonts/Ustrokeregular.woff") format("woff");
+}
+
+body {
+    margin: 0 auto;
+    padding: 40px;
+
+    font-family: "Ustroke", serif;
+
+    background-image: url('assets/images/green-dirty-blackboard.jpg');
+}

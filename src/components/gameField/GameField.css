@@ -1,0 +1,26 @@
+.GameField {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    transition: 1s;
+}
+
+.GameField>img {
+    width: 60%;
+    opacity: 0;
+
+    animation: gallows_opacity 1s forwards;
+    animation-delay: .4s;
+}
+
+@keyframes gallows_opacity {
+    from {
+            opacity: 0;
+    }
+    to {
+            opacity: 1;
+    }
+}

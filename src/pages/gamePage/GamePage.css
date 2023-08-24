@@ -1,0 +1,33 @@
+.GamePage {
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    opacity: 0;
+
+    gap: 20px;
+
+    animation: start-game .8s forwards;
+    animation-delay: 0.8s;
+}
+
+.game-over {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 50px;
+}
+
+@keyframes start-game {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
