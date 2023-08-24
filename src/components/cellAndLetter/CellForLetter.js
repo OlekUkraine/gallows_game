@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import './CellForLetter.css';
 
 const CellForLetter = ({withLetter, index}) => {
