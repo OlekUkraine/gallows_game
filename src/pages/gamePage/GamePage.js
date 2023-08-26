@@ -7,18 +7,24 @@ import {CellsForLetters} from "../../components/cellsAndLetters/CellsForLetters"
 import {wordsForGame} from "../../memo/database/arrWords/arrWords";
 import {KeyboardForGame} from "../../components/keyboard/KeyboardForGame";
 import {getWord} from "../../store/slices/word.slice";
+import {createCheckWord} from "../../store/slices/field.slice";
 
 const GamePage = () => {
     const dispatch = useDispatch();
     const { wordArray, wordDescription: description } = useSelector(store => store.word);
     const { youWin, youFailed } = useSelector(store => store.field);
 
-
-    console.log('GAME PAGE')
+    useEffect(() => {
+        if (!wordArray.length) {
+            dispatch(getWord([...wordsForGame]));
+        }
+    },[]);
 
     useEffect(() => {
-            dispatch(getWord({...wordsForGame}));
-        }, []);
+        if (wordArray.length) {
+            dispatch(createCheckWord(wordArray));
+        }
+    }, [wordArray]);
 
     if (youWin) {
         return (

@@ -1,10 +1,11 @@
 import {createSlice} from "@reduxjs/toolkit";
+import {wordService} from "../../services/word.service";
 
 const initialState = {
     word: {
-        id: 15,
-        word: null,
-        description: null,
+        // id: 15,
+        // word: null,
+        // description: null,
     },
     wordArray: [],
     wordDescription: '',
@@ -15,11 +16,10 @@ const wordSlice = createSlice({
     initialState,
     reducers: {
         getWord:(state, action) => {
-                const randomIndex = Math.floor(Math.random() * 10);
-                state.word = action.payload[randomIndex];
+            const word = wordService.createWordAndDescription(action.payload);
 
-            state.wordArray = state.word.word.split('');
-            state.wordDescription = state.word.description;
+            state.wordArray = word.word.split('');
+            state.wordDescription = word.description;
         }
     }
 })

@@ -33,7 +33,27 @@
     z-index: 1;
 }
 
-.OneCell:hover,
-.abc:hover {
+.OneCell:hover{
     scale: 102%;
+}
+
+.disable-letter {
+    width: 40px;
+    margin: 5px;
+
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    box-sizing: border-box;
+
+    opacity: .7;
+}
+
+.disable-letter>img {
+    width: 100%;
 }

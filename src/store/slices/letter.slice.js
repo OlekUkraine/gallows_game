@@ -7,6 +7,9 @@ const initialState = {
 const letterSlice = createSlice({
     name: 'letterSlice',
     initialState,
+    reducers: {
+
+    }
 })
 
 const letterReducer = letterSlice.reducer;

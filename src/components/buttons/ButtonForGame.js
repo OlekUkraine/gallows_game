@@ -3,7 +3,6 @@ import './ButtonForGame.css';
 import {NavLink} from "react-router-dom";
 
 const ButtonForGame = ({buttonName}) => {
-
     return (
             <NavLink to={buttonName}>
                 <div className={'ButtonForGame'}>
