@@ -2,11 +2,6 @@ import {createSlice} from "@reduxjs/toolkit";
 import {wordService} from "../../services/word.service";
 
 const initialState = {
-    word: {
-        // id: 15,
-        // word: null,
-        // description: null,
-    },
     wordArray: [],
     wordDescription: '',
 }

@@ -11,5 +11,7 @@ body {
 
     font-family: "Ustroke", serif;
 
+    user-select: none;
+
     background-image: url('assets/images/green-dirty-blackboard.jpg');
 }
